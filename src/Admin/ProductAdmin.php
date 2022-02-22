@@ -16,9 +16,9 @@ final class ProductAdmin extends AbstractAdmin
     protected function configureDatagridFilters(DatagridMapper $filter): void
     {
         $filter
-            ->add('id')
             ->add('name')
             ->add('description')
+            ->add('category')
             ->add('active')
             ->add('createdAt')
             ->add('updatedAt')
@@ -30,9 +30,9 @@ final class ProductAdmin extends AbstractAdmin
     protected function configureListFields(ListMapper $list): void
     {
         $list
-            ->add('id')
             ->add('name')
             ->add('description')
+            ->add('category')
             ->add('active')
             ->add('createdAt')
             ->add('updatedAt')
@@ -50,9 +50,9 @@ final class ProductAdmin extends AbstractAdmin
     protected function configureFormFields(FormMapper $form): void
     {
         $form
-            ->add('id')
             ->add('name')
             ->add('description')
+            ->add('category')
             ->add('active')
             ->add('createdAt')
             ->add('updatedAt')
@@ -64,9 +64,9 @@ final class ProductAdmin extends AbstractAdmin
     protected function configureShowFields(ShowMapper $show): void
     {
         $show
-            ->add('id')
             ->add('name')
             ->add('description')
+            ->add('category')
             ->add('active')
             ->add('createdAt')
             ->add('updatedAt')
