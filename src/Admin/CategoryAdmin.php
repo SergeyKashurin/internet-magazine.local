@@ -26,6 +26,7 @@ final class CategoryAdmin extends AbstractAdmin
         $list
             ->add('id')
             ->add('name')
+            ->add('active')
             ->add(ListMapper::NAME_ACTIONS, null, [
                 'actions' => [
                     'show' => [],
@@ -39,14 +40,17 @@ final class CategoryAdmin extends AbstractAdmin
     {
         $form
             ->add('name')
+            ->add('parent')
+            ->add('active')
             ;
     }
 
     protected function configureShowFields(ShowMapper $show): void
     {
         $show
-            ->add('id')
             ->add('name')
+            ->add('parent')
+            ->add('active')
             ;
     }
 }
