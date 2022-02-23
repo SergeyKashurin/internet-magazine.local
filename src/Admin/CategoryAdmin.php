@@ -16,16 +16,21 @@ final class CategoryAdmin extends AbstractAdmin
     protected function configureDatagridFilters(DatagridMapper $filter): void
     {
         $filter
-            ->add('id')
-            ->add('name')
+            ->add('title')
+            ->add('createdAt')
+            ->add('updatedAt')
+            ->add('active')
             ;
     }
 
     protected function configureListFields(ListMapper $list): void
     {
         $list
-            ->add('id')
-            ->add('name')
+            ->add('title')
+            ->add('parent')
+            ->add('root')
+            ->add('createdAt')
+            ->add('updatedAt')
             ->add('active')
             ->add(ListMapper::NAME_ACTIONS, null, [
                 'actions' => [
@@ -39,8 +44,10 @@ final class CategoryAdmin extends AbstractAdmin
     protected function configureFormFields(FormMapper $form): void
     {
         $form
-            ->add('name')
+            ->add('title')
             ->add('parent')
+            ->add('createdAt')
+            ->add('updatedAt')
             ->add('active')
             ;
     }
@@ -48,8 +55,15 @@ final class CategoryAdmin extends AbstractAdmin
     protected function configureShowFields(ShowMapper $show): void
     {
         $show
-            ->add('name')
+//            ->add('id')
+            ->add('title')
             ->add('parent')
+            ->add('root')
+            ->add('createdAt')
+            ->add('updatedAt')
+            ->add('lft')
+            ->add('lvl')
+            ->add('rgt')
             ->add('active')
             ;
     }
