@@ -6,20 +6,16 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    {#        {% block stylesheets %}#}
-    {#            {{ encore_entry_link_tags('app') }}#}
-    {#        {% endblock %}#}
-
-    {#        {% block javascripts %}#}
-    {#            {{ encore_entry_script_tags('app') }}#}
-    {#        {% endblock %}#}
+    {% block javascripts %}
+        {{ encore_entry_script_tags('section-front') }}
+    {% endblock %}
 
     <link rel="apple-touch-icon" href="{{ asset('build/img/apple-icon.png') }}">
     <link rel="shortcut icon" type="image/x-icon" href="{{ asset('build/img/favicon.ico') }}">
 
-    <link rel="stylesheet" href="{{ asset('build/css/bootstrap.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('build/css/templatemo.css') }}">
-    <link rel="stylesheet" href="{{ asset('build/css/custom.css') }}">
+    {% block stylesheets %}
+        {{ encore_entry_link_tags('section-front') }}
+    {% endblock %}
 
     <!-- Load fonts style after rendering the layout styles -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;700;900&display=swap">
