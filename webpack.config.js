@@ -37,6 +37,8 @@ Encore
         to: 'img/[path][name].[ext]'
     })
 
+    .autoProvidejQuery()
+
     /*
      * FEATURE CONFIG
      *
