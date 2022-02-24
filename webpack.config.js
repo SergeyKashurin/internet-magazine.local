@@ -34,7 +34,7 @@ Encore
 
     .copyFiles({
         from: './assets/frontend/img',
-        to: 'img/[path][name].[hash.8].[ext]'
+        to: 'img/[path][name].[ext]'
     })
 
     /*
